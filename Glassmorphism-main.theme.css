@@ -1,3 +1,11 @@
+/**
+ * @name         Glassmorphism main css
+ * @description  Glassmorphism by Cluarain.
+ * @author       Cluarain
+ * @version      1.0
+ * @source       https://github.com/Cluarain/glassmorphism-discord-theme
+*/
+
 :root {
   --main-padding: 2rem;
   --main-gap: 1.5rem;
