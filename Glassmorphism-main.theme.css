@@ -3,11 +3,6 @@
   --main-gap: 1.5rem;
   --padding-guilds: 1rem;
 
-  /* --bg-image-1: var(--bg-scretch-center) url(https://cdn.svgator.com/images/2022/06/animated-svg-background-css.svg); */
-  --bg-image: url(https://cdn.svgator.com/images/2022/06/use-svg-as-background-image-particle-strokes.svg);
-  /* --bg-image: var(--bg-scretch-center) url(https://i.pinimg.com/originals/b2/2a/a2/b22aa22b2f3f55b6468361158d52e2e7.gif); */
-  /* --bg-image-4: var(--bg-fit-center) url(https://wallpapercave.com/wp/wp12850275.gif); */
-
 
   --text-main: rgba(255, 255, 255, .8);
 
@@ -73,7 +68,6 @@
     width: 100vw;
     height: 100vh;
     background: var(--bg-image);
-    /* animation: var(--bg-slide-animation); */
     filter: var(--bg-filter);
   }
 }
