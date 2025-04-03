@@ -6,7 +6,7 @@
  * @source       https://github.com/Cluarain/glassmorphism-discord-theme
 */
 
-@import url(https://raw.githubusercontent.com/Cluarain/glassmorphism-discord-theme/refs/heads/main/Glassmorphism-main.theme.css);
+@import url(https://raw.githubusercontent.com/Cluarain/glassmorphism-discord-theme/refs/heads/main/main.css);
 
 :root {
   --bg-scretch-center: no-repeat center center / cover;

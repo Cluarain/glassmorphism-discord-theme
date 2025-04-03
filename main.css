@@ -45,7 +45,8 @@
 
   --shadow-glass-4: -5px 0px 10px rgba(0, 0, 0, .5);
   --gap-glass-1: 1rem;
-  
+
+  --black: transparent;
   --neutral-79: transparent;
   /* --neutral-80: transparent; */
   --neutral-81: transparent;
@@ -250,10 +251,10 @@ div[role="dialog"]>div,
   border: var(--border-glass-1) !important;
 }
 
-.muted__20a53,
+/* .muted__20a53,
 *::placeholder {
   color: var(--text-muted) !important;
-}
+} */
 
 .placeholder__1b31f {
   font-weight: 500;
