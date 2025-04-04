@@ -8,10 +8,18 @@
 
 
 @import url(https://cluarain.github.io/glassmorphism-discord-theme/main.css);
-@import url(https://DiscordStyles.github.io/DarkMatter/src/base.css);
+
 
 :root {
   --bg-scretch-center: no-repeat center center / cover;
   --bg-fit-center: no-repeat center center / contain;
-  --bg-image: url(https://cdn.svgator.com/images/2022/06/use-svg-as-background-image-particle-strokes.svg);
+
+  --bg-image: 
+  /* var(--bg-scretch-center) */
+  url(https://cdn.svgator.com/images/2022/06/use-svg-as-background-image-particle-strokes.svg);
+
+  /* filter if needed 
+    * https://cssgenerator.org/filter-css-generator.html 
+    */
+  --bg-filter: saturate(150%);
 }
