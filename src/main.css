@@ -7,11 +7,8 @@
   --main-gap: 1.5rem;
   --padding-guilds: 1rem;
 
-
   --text-main: rgba(255, 255, 255, .8);
-
   /* --text-main: rgba(0, 0, 0, .8); */
-  --neutral-5: rgba(255, 255, 255, .9) !important;
 
   --text-tertiary: var(--text-main) !important;
   --channels-default: var(--text-main) !important;
@@ -42,7 +39,9 @@
   --shadow-glass-4: -5px 0px 10px rgba(0, 0, 0, .5);
   --gap-glass-1: 1rem;
 
+
   --black: transparent;
+  --neutral-5: rgba(255, 255, 255, .9) !important;
   --neutral-79: transparent;
   /* --neutral-80: transparent; */
   --neutral-81: transparent;
