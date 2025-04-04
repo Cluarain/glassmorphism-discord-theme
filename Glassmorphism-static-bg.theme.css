@@ -5,8 +5,9 @@
  * @version      1.0
  * @source       https://github.com/Cluarain/glassmorphism-discord-theme
 */
-@charset "UTF-8";
-@import url(https://raw.githubusercontent.com/Cluarain/glassmorphism-discord-theme/refs/heads/main/main.css);
+
+@import url('https://raw.githubusercontent.com/Cluarain/glassmorphism-discord-theme/refs/heads/main/main.css');
+/* @import url('https://DiscordStyles.github.io/DarkMatter/src/base.css'); */
 
 :root {
   --bg-scretch-center: no-repeat center center / cover;
