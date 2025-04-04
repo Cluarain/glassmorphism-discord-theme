@@ -2,21 +2,21 @@
  * @name         Glassmorphism Static
  * @description  Glassmorphism by Cluarain. Static background
  * @author       Cluarain
- * @version      1.0
+ * @version      1.1
  * @source       https://github.com/Cluarain/glassmorphism-discord-theme
 */
 
 
-@import url(https://cluarain.github.io/glassmorphism-discord-theme/main.css);
+/* @import url(https://cluarain.github.io/glassmorphism-discord-theme/main.css); */
 
 
 :root {
   --bg-scretch-center: no-repeat center center / cover;
   --bg-fit-center: no-repeat center center / contain;
 
-  --bg-image: 
-  /* var(--bg-scretch-center) */
-  url(https://cdn.svgator.com/images/2022/06/use-svg-as-background-image-particle-strokes.svg);
+  --bg-image:
+    /* var(--bg-scretch-center) */
+    url(https://cdn.svgator.com/images/2022/06/use-svg-as-background-image-particle-strokes.svg);
 
   /* filter if needed 
     * https://cssgenerator.org/filter-css-generator.html 
