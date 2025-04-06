@@ -120,7 +120,7 @@
 
 .root__49fc1,
 .container__3a5a1,
-.layerContainer_da8173>div>div>div,
+.layerContainer_da8173>div>div>div:not(.chat_ee72fa),
 .buttonsInner__5126c,
 .participantsButton__211d1,
 .tile_d6271c,
@@ -179,6 +179,7 @@
 
 
   &>.guilds_c48ade {
+    overflow-y: auto;
     padding-top: var(--padding-guilds) !important;
     height: fit-content;
     max-height: calc(100% - 215px - var(--padding-guilds) - var(--main-gap)) !important;
