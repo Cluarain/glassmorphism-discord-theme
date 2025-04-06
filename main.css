@@ -20,13 +20,17 @@
 
   /* --background-surface-higher: rgba(0, 0, 0, .3) !important; */
   /* --background-mod-subtle: rgba(0, 0, 0, .3) !important; */
+  --background-surface-higher: transparent;
+  --background-mod-subtle: transparent;
+
   --background-floating: transparent;
   --background-modifier-accent: transparent;
-  --background-surface-higher: transparent;
   --black: transparent;
   --neutral-5: rgba(255, 255, 255, .9) !important;
   --neutral-69: transparent;
   --neutral-72: transparent;
+  --neutral-73: transparent;
+  --neutral-76: transparent;
   --neutral-79: transparent;
   --neutral-80: transparent;
   --neutral-81: transparent;
@@ -57,21 +61,21 @@
     overflow: visible !important;
     height: 94vh !important;
   }
+}
 
-  &::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background: var(--bg-image);
-    filter: var(--bg-filter);
-  }
+.appMount__51fd7::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: var(--bg-image);
+  filter: var(--bg-filter);
 }
 
 .bar_c38106 {
-  z-index: 1;
+  z-index: 99999;
   border-bottom: var(--border-glass-3);
   background: var(--bg-transparent-3);
   backdrop-filter: var(--blur-glass-3);
@@ -95,7 +99,7 @@
   flex: none !important;
 }
 
-.root__49fc1,
+.bd-addon-card,
 .container__3a5a1,
 .layerContainer_da8173>div>div>div:not(.chat_ee72fa),
 .buttonsInner__5126c,
@@ -115,7 +119,7 @@
 
 .itemCard__7e549,
 .searchBar__5ec2f {
-  background: var(--bg-transparent-3) !important;
+  /* background: var(--bg-transparent-3) !important; */
   border: var(--border-glass-2) !important;
   border-radius: var(--borderRadius-glass-1) !important;
 }
@@ -130,13 +134,13 @@
 
 
 .channelTextArea_f75fb0 {
-  background: var(--bg-transparent-3) !important;
+  /* background: var(--bg-transparent-3) !important; */
 }
 
 /* для автовысоты каналов */
-.content__99f8c {
+/* .content__99f8c {
   height: auto !important;
-}
+} */
 
 /* Для некоторых заголовков */
 .actionRow__6981d,
@@ -191,8 +195,7 @@
 .panel__5dec7,
 .header__45690 {
   border-bottom: var(--border-glass-1) !important;
-  background: var(--bg-transparent-2) !important;
-  /* border-radius: var(--borderRadius-glass-2); */
+  /* background: var(--bg-transparent-2) !important; */
 }
 
 
@@ -202,17 +205,16 @@
   border-bottom: var(--border-glass-1) !important;
 }
 
-.container_c8ffbb {
+.members_c8ffbb {
   border-left: var(--border-glass-1) !important;
-  background: var(--bg-transparent-2) !important;
-
+  /* background: var(--bg-transparent-2) !important; */
   border-bottom-right-radius: var(--borderRadius-glass-1);
 }
 
 .sourceScroller_a2de16,
 .footer__49fc1 {
   border-top: var(--border-glass-1) !important;
-  background: var(--bg-transparent-2) !important;
+  /* background: var(--bg-transparent-2) !important; */
   padding-top: 1rem;
 }
 
@@ -233,7 +235,7 @@
   border-radius: var(--borderRadius-glass-1);
 }
 
-.streamPreviewWrapper__6da2d{
+.streamPreviewWrapper__6da2d {
   padding: 0 !important;
 }
 
@@ -265,4 +267,20 @@
 .linkButtonIcon__972a0,
 .icon__9293f {
   color: var(--icons-color-main) !important;
+}
+
+.contentColumn__23e6b {
+  padding-top: calc(60px - 36px);
+  padding-inline: 1rem;
+  backdrop-filter: var(--blur-glass-1) !important;
+  background: var(--bg-transparent-1) !important;
+}
+
+.side_b3f026 {
+  padding: 1rem;
+  background: var(--bg-transparent-1) !important;
+  border: var(--border-glass-1) !important;
+  box-shadow: var(--shadow-glass-1) !important;
+  border-radius: var(--borderRadius-glass-1) !important;
+  backdrop-filter: var(--blur-glass-1) !important;
 }

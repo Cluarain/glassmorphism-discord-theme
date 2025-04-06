@@ -2,46 +2,52 @@
  * @name         Glassmorphism Static
  * @description  Glassmorphism by Cluarain. Static background
  * @author       Cluarain
- * @version      1.1
+ * @version      1.2
  * @source       https://github.com/Cluarain/glassmorphism-discord-theme
 */
 
 
-@import url(https://cluarain.github.io/glassmorphism-discord-theme/main.css);
+/* @import url(https://cluarain.github.io/glassmorphism-discord-theme/main.css); */
 
 
 :root {
   --bg-scretch-center: no-repeat center center / cover;
   --bg-fit-center: no-repeat center center / contain;
 
-  --bg-image:
-    /* var(--bg-scretch-center) */
-    url(https://cdn.svgator.com/images/2022/06/use-svg-as-background-image-particle-strokes.svg);
+  --bg-image: var(--bg-scretch-center) url(https://cdn.svgator.com/images/2022/06/use-svg-as-background-image-particle-strokes.svg);
+  /* --bg-image: var(--bg-scretch-center) url(https://i.pinimg.com/originals/b2/2a/a2/b22aa22b2f3f55b6468361158d52e2e7.gif); */
 
   /* filter if needed 
     * https://cssgenerator.org/filter-css-generator.html 
     */
   --bg-filter: saturate(150%);
 
+  /* only RGB, not RGBa */
+  --main-bg-rgb: 20, 20, 20;
+  --main-bg-opacity: 0.1;
 
-  --bg-transparent-1: rgba(39, 39, 39, .1);
-  --border-glass-1: 2px solid rgba(255, 255, 255, .2);
-  --shadow-glass-1: 0 0 50px rgba(0, 0, 0, .3);
+  --main-border-color: 255, 255, 255;
+  --main-bg-shadow-color: 0, 0, 0;
+  --main-bg-shadow-opacity: 0.3;
+
+  --bg-transparent-1: rgba(var(--main-bg-rgb), var(--main-bg-opacity));
+  --border-glass-1: 2px solid rgba(var(--main-border-color), 0.2);
+  --shadow-glass-1: 0 0 50px rgba(var(--main-bg-shadow-color), var(--main-bg-shadow-opacity));
   --borderRadius-glass-1: 10px;
-  --blur-glass-1: blur(5px);
+  --blur-glass-1: blur(10px);
 
-  --bg-transparent-2: rgba(39, 39, 39, 0.2);
-  --border-glass-2: 2px solid rgba(255, 255, 255, .1);
-  --shadow-glass-2: 0 0 30px rgba(0, 0, 0, 0.5);
+  --bg-transparent-2: rgba(var(--main-bg-rgb), calc(var(--main-bg-opacity) + .2));
+  --border-glass-2: 2px solid rgba(var(--main-border-color), 0.1);
+  --shadow-glass-2: 0 0 30px rgba(var(--main-bg-shadow-color), var(--main-bg-shadow-opacity));
   --borderRadius-glass-2: 7px;
   --blur-glass-2: blur(20px);
 
-  --bg-transparent-3: rgba(39, 39, 39, .3);
-  --border-glass-3: 1px solid rgba(255, 255, 255, .1);
-  --shadow-glass-3: 0 2px 10px rgba(0, 0, 0, .5);
+  --bg-transparent-3: rgba(var(--main-bg-rgb), calc(var(--main-bg-opacity) + .3));
+  --border-glass-3: 1px solid rgba(var(--main-border-color), 0.1);
+  --shadow-glass-3: 0 2px 10px rgba(var(--main-bg-shadow-color), var(--main-bg-shadow-opacity));
   --blur-glass-3: blur(2px);
 
-  --bg-transparent-4: rgba(39, 39, 39, .5);
+  --bg-transparent-4: rgba(var(--main-bg-rgb), calc(var(--main-bg-opacity) + .4));
+  --shadow-glass-4: -5px 0px 10px rgba(var(--main-bg-shadow-color), var(--main-bg-shadow-opacity));
   --blur-glass-4: blur(30px);
-  --shadow-glass-4: -5px 0px 10px rgba(0, 0, 0, .5);
 }
