@@ -22,4 +22,26 @@
     * https://cssgenerator.org/filter-css-generator.html 
     */
   --bg-filter: saturate(150%);
+
+
+  --bg-transparent-1: rgba(39, 39, 39, .1);
+  --border-glass-1: 2px solid rgba(255, 255, 255, .2);
+  --shadow-glass-1: 0 0 50px rgba(0, 0, 0, .3);
+  --borderRadius-glass-1: 10px;
+  --blur-glass-1: blur(5px);
+
+  --bg-transparent-2: rgba(39, 39, 39, 0.2);
+  --border-glass-2: 2px solid rgba(255, 255, 255, .1);
+  --shadow-glass-2: 0 0 30px rgba(0, 0, 0, 0.5);
+  --borderRadius-glass-2: 7px;
+  --blur-glass-2: blur(20px);
+
+  --bg-transparent-3: rgba(39, 39, 39, .3);
+  --border-glass-3: 1px solid rgba(255, 255, 255, .1);
+  --shadow-glass-3: 0 2px 10px rgba(0, 0, 0, .5);
+  --blur-glass-3: blur(2px);
+
+  --bg-transparent-4: rgba(39, 39, 39, .5);
+  --blur-glass-4: blur(30px);
+  --shadow-glass-4: -5px 0px 10px rgba(0, 0, 0, .5);
 }
