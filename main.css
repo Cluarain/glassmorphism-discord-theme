@@ -16,8 +16,7 @@
 
   --icons-color-main: rgba(255, 255, 255, .5) !important;
 
-  --background-surface-higher: rgba(0, 0, 0, .3) !important;
-  /* --background-mod-subtle: rgba(0, 0, 0, .3) !important; */
+
 
   --bg-transparent-1: rgba(39, 39, 39, .1);
   --border-glass-1: 2px solid rgba(255, 255, 255, .2);
@@ -38,10 +37,12 @@
 
   --bg-transparent-4: rgba(39, 39, 39, .5);
   --blur-glass-4: blur(30px);
-
   --shadow-glass-4: -5px 0px 10px rgba(0, 0, 0, .5);
+
   --gap-glass-1: 1rem;
 
+  /* --background-surface-higher: rgba(0, 0, 0, .3) !important; */
+  /* --background-mod-subtle: rgba(0, 0, 0, .3) !important; */
   --background-floating: transparent;
   --background-modifier-accent: transparent;
   --background-surface-higher: transparent;
@@ -109,7 +110,6 @@
 .panels_c48ade,
 .sidebarList_c48ade,
 .experimentWrapper__1405b>div {
-  margin: 0 !important;
   background: var(--bg-transparent-1) !important;
   border: var(--border-glass-1) !important;
   box-shadow: var(--shadow-glass-1) !important;
@@ -182,10 +182,6 @@
     padding-top: var(--padding-guilds) !important;
     height: fit-content;
     max-height: calc(100% - 215px - var(--padding-guilds) - var(--main-gap)) !important;
-
-    &>.tree_ef3116 {
-      overflow-y: auto;
-    }
   }
 
   &>.sidebarList_c48ade {
