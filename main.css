@@ -179,10 +179,13 @@
 
 
   &>.guilds_c48ade {
-    overflow-y: auto;
     padding-top: var(--padding-guilds) !important;
     height: fit-content;
     max-height: calc(100% - 215px - var(--padding-guilds) - var(--main-gap)) !important;
+
+    &>.tree_ef3116 {
+      overflow-y: auto;
+    }
   }
 
   &>.sidebarList_c48ade {
