@@ -20,9 +20,9 @@
 
   /* --background-surface-higher: rgba(0, 0, 0, .3) !important; */
   /* --background-mod-subtle: rgba(0, 0, 0, .3) !important; */
-  --background-surface-higher: transparent;
+  /* --background-surface-higher: transparent !important; */
   --background-mod-subtle: transparent;
-
+  --background-surface-high: var(--bg-transparent-1) !important;
   --background-floating: transparent;
   --background-modifier-accent: transparent;
   --black: transparent;
@@ -117,6 +117,7 @@
 }
 
 
+.container__0f2e8,
 .itemCard__7e549,
 .searchBar__5ec2f {
   /* background: var(--bg-transparent-3) !important; */
@@ -136,11 +137,6 @@
 .channelTextArea_f75fb0 {
   /* background: var(--bg-transparent-3) !important; */
 }
-
-/* для автовысоты каналов */
-/* .content__99f8c {
-  height: auto !important;
-} */
 
 /* Для некоторых заголовков */
 .actionRow__6981d,
@@ -163,6 +159,8 @@
     padding-top: var(--padding-guilds) !important;
     height: fit-content;
     max-height: calc(100% - 215px - var(--padding-guilds) - var(--main-gap)) !important;
+    overflow-y: auto;
+    scrollbar-width: none;
   }
 
   &>.sidebarList_c48ade {
@@ -243,6 +241,7 @@
   border: none !important;
 }
 
+.streamPreview__6da2d,
 .menu_c1e9c4,
 .container__2637a,
 .children__9293f:after,
@@ -283,4 +282,9 @@
   box-shadow: var(--shadow-glass-1) !important;
   border-radius: var(--borderRadius-glass-1) !important;
   backdrop-filter: var(--blur-glass-1) !important;
+}
+
+.container__4e30a {
+  margin-left: 0;
+  background: none;
 }
