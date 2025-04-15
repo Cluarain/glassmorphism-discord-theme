@@ -7,9 +7,6 @@
   --main-gap: 1.5rem;
   --padding-guilds: 1rem;
 
-  --text-main: rgba(255, 255, 255, .8);
-  /* --text-main: rgba(0, 0, 0, .8); */
-
   --text-tertiary: var(--text-main) !important;
   --channels-default: var(--text-main) !important;
   --text-muted: rgba(255, 255, 255, .5) !important;
@@ -250,7 +247,7 @@
 }
 
 .joinButton__5aa3a {
-  color: var(--text-main) !important;
+  color: var(--text-muted) !important;
   border: var(--border-glass-1) !important;
 }
 
