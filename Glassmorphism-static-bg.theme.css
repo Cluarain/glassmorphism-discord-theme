@@ -2,7 +2,7 @@
  * @name         Glassmorphism Static
  * @description  Glassmorphism by Cluarain. Static background
  * @author       Cluarain
- * @version      1.3
+ * @version      1.4
  * @source       https://github.com/Cluarain/glassmorphism-discord-theme
 */
 
@@ -22,6 +22,7 @@
     */
   --bg-filter: saturate(150%);
 
+  
   /* only RGB, not RGBa */
   --main-bg-rgb: 20, 20, 20;
   --main-bg-opacity: 0.1;

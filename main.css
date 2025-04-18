@@ -2,7 +2,7 @@
  * Cluarain`s custom codebase for rewrite Discords`s rules
  */
 
-:root {
+ :root {
   --main-padding: 2rem;
   --main-gap: 1.5rem;
   --padding-guilds: 1rem;
@@ -24,6 +24,7 @@
   --background-modifier-accent: transparent;
   --black: transparent;
   --neutral-5: rgba(255, 255, 255, .9) !important;
+  --neutral-64: transparent;
   --neutral-69: transparent;
   --neutral-72: transparent;
   --neutral-73: transparent;
@@ -251,7 +252,6 @@
   border: var(--border-glass-1) !important;
 }
 
-
 .muted__20a53,
 .input_a45028::placeholder,
 .placeholder__1b31f {
@@ -284,4 +284,12 @@
 .container__4e30a {
   margin-left: 0;
   background: none;
+}
+
+.popoutWrapper_d6b206 {
+  margin-bottom: 0;
+}
+
+.fullRegionButton_f1ceac {
+  border-radius: var(--borderRadius-glass-2);
 }
