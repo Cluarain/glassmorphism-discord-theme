@@ -2,7 +2,7 @@
  * @name         Glassmorphism Animated
  * @description  Glassmorphism by Cluarain. Animated background
  * @author       Cluarain
- * @version      1.4
+ * @version      1.5
  * @source       https://github.com/Cluarain/glassmorphism-discord-theme
 */
 
@@ -52,9 +52,12 @@
   --shadow-glass-4: -5px 0px 10px rgba(var(--main-bg-shadow-color), var(--main-bg-shadow-opacity));
   --blur-glass-4: blur(30px);
 
-  --text-main: rgba(255, 255, 255, .8) !important;
-  --text-muted: rgba(255, 255, 255, .5) !important;
-  --icons-color-main: rgba(255, 255, 255, .5) !important;
+  --text-main: rgba(255, 255, 255, .8);
+  --text-muted: rgba(255, 255, 255, .5);
+
+  --icons-color-main: rgba(255, 255, 255, .7);
+  --icons-color-inactive: rgba(255, 255, 255, .4);
+  --main-accent-color-discord: rgba(0, 121, 101, 0.8);
 }
 
 @keyframes changeBg {
