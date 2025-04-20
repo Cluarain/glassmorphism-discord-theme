@@ -26,10 +26,12 @@
   --black: transparent;
   --blurple-34: var(--main-accent-color-discord);
   --blurple-35: var(--main-accent-color-discord);
+  
   --blurple-49: var(--main-accent-color-discord);
   --blurple-50: var(--main-accent-color-discord);
   --blurple-59: color-mix(in srgb, var(--main-accent-color-discord) 50%, #000);
-
+  --blurple-65: color-mix(in srgb, var(--main-accent-color-discord) 50%, #000);
+  
   --neutral-5: rgba(255, 255, 255, .9) !important;
   --neutral-23: var(--icons-color-main) !important;
   /* --neutral-29: red; вроде как только неактивные иконки */
