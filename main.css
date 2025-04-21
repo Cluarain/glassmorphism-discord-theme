@@ -122,10 +122,6 @@
   display: none !important;
 }
 
-.channelTextArea_f75fb0 {
-  /* background: var(--bg-transparent-3) !important; */
-}
-
 /* Для некоторых заголовков */
 .actionRow__6981d,
 .header__49fc1 {
@@ -232,11 +228,6 @@
     }
   }
 
-  .menu_c1e9c4::before {
-    /* border: var(--border-glass-1); */
-    /* border-radius: calc(var(--borderRadius-glass-2) - 5px) !important; */
-  }
-
   .tooltip__382e7 {
     backdrop-filter: var(--blur-glass-2);
   }
@@ -244,7 +235,6 @@
   .container__0f2e8,
   .itemCard__7e549,
   .searchBar__5ec2f {
-    /* background: var(--bg-transparent-3) !important; */
     border: var(--border-glass-2);
     border-radius: var(--borderRadius-glass-1);
   }
@@ -261,6 +251,11 @@
     border-top: none;
     border-left: var(--border-glass-1);
     border-radius: 0px;
+  }
+
+  .theme-dark.custom-user-profile-theme {
+    border-radius: var(--borderRadius-glass-2);
+
   }
 
   .modalContent__468a6 {
@@ -284,7 +279,6 @@
   .sourceScroller_a2de16,
   .footer__49fc1 {
     border-top: var(--border-glass-1);
-    /* background: var(--bg-transparent-2); */
     padding-top: 1rem;
   }
 
@@ -300,12 +294,10 @@
   .guildSeparator__252b6,
   .panel__5dec7 {
     border-bottom: var(--border-glass-1);
-    /* background: var(--bg-transparent-2) */
   }
 
   .members_c8ffbb {
     border-left: var(--border-glass-1);
-    /* background: var(--bg-transparent-2); */
     border-bottom-right-radius: var(--borderRadius-glass-1);
   }
 
@@ -328,7 +320,6 @@
   }
 
   .contentRegion__23e6b {
-    /* padding-top: calc(60px - 36px); */
     padding-inline: 1rem;
     backdrop-filter: var(--blur-glass-1);
     background: var(--bg-transparent-1);
@@ -383,7 +374,6 @@
 
   .standardStickerShortcut__3ad28,
   .unicodeShortcut_b9ee0c {
-    /* background-color: var(--bg-transparent-4); */
     backdrop-filter: var(--blur-glass-3);
   }
 }
