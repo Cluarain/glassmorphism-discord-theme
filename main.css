@@ -7,40 +7,51 @@
   --main-gap: 1.5rem;
   --padding-guilds: 1rem;
 
-  --text-tertiary: var(--text-main) !important;
-  --channels-default: var(--text-main) !important;
-  --text-muted: rgba(255, 255, 255, .5) !important;
+  --hover-active-color: color-mix(in srgb, var(--main-accent-color-discord) 80%, transparent);
+
+  --text-main: var(--text-custom-main) !important;
+  --text-tertiary: var(--text-custom-main) !important;
+  --channels-default: var(--text-custom-main) !important;
+
+  --text-muted: var(--text-custom-muted) !important;
 
   --icon-primary: var(--icons-color-main) !important;
   --icon-tertiary: var(--icons-color-inactive) !important;
 
   --gap-glass-1: 1rem;
-  --radius-md: var(--borderRadius-glass-2);
-  /* --background-surface-higher: rgba(0, 0, 0, .3) !important; */
-  /* --background-mod-subtle: rgba(0, 0, 0, .3) !important; */
-  /* --background-surface-higher: transparent !important; */
+  --radius-xs: var(--borderRadius-glass-2) !important;
+  --radius-md: var(--borderRadius-glass-2) !important;
+  --radius-lg: var(--borderRadius-glass-1) !important;
+
   --background-mod-subtle: transparent;
   --background-surface-high: var(--bg-transparent-1) !important;
   --background-floating: transparent;
   --background-modifier-accent: transparent;
+
+
   --black: transparent;
   --blurple-34: var(--main-accent-color-discord);
   --blurple-35: var(--main-accent-color-discord);
-  
+
   --blurple-49: var(--main-accent-color-discord);
   --blurple-50: var(--main-accent-color-discord);
-  --blurple-59: color-mix(in srgb, var(--main-accent-color-discord) 50%, #000);
-  --blurple-65: color-mix(in srgb, var(--main-accent-color-discord) 50%, #000);
-  
+  --blurple-59: var(--hover-active-color) !important;
+  --blurple-65: var(--hover-active-color) !important;
+
   --neutral-5: rgba(255, 255, 255, .9) !important;
   --neutral-23: var(--icons-color-main) !important;
+  --neutral-27: var(--icons-color-main) !important;
   /* --neutral-29: red; вроде как только неактивные иконки */
+  --neutral-34: var(--text-custom-muted);
+  --neutral-42: var(--bg-transparent-3);
+  --neutral-44: var(--bg-transparent-3);
+  --neutral-49: transparent;
   --neutral-64: transparent;
   --neutral-69: transparent;
   --neutral-72: transparent;
   --neutral-73: transparent;
   --neutral-76: transparent;
-  --neutral-79: var(--bg-transparent-4);
+  --neutral-79: transparent;
   --neutral-80: transparent;
   --neutral-81: transparent;
   --neutral-82: transparent;
@@ -48,12 +59,25 @@
   --neutral-86: transparent;
   --neutral-91: transparent;
   --neutral-92: transparent;
+  --neutral-95: var(--bg-transparent-3);
+  --neutral-97: transparent;
 
   /* прозрачность для карточки пользователя */
   /* --plum-15: transparent; */
 
+  --plum-18: var(--bg-transparent-2);
+
   --button-filled-white-text: black !important;
 }
+
+.visual-refresh .theme-darker,
+.visual-refresh.theme-darker {
+  --background-modifier-hover: var(--hover-active-color);
+  --background-modifier-active: var(--hover-active-color);
+
+  --black-500: transparent;
+}
+
 
 .scroller__99e7c {
   margin: 0 !important;
@@ -167,21 +191,53 @@
     flex: none;
   }
 
+  .rootWithShadow__49fc1,
+  /* .submenu_c1e9c4, */
   .addFriendInputWrapper__72ba7,
   .bd-addon-card,
   .container__3a5a1,
-  .layerContainer_da8173>div>div>div:not(.chat_ee72fa),
   .buttonsInner__5126c,
   .participantsButton__211d1,
   .tile_d6271c,
-  .embedFull__623de,
+  /* .embedFull__623de, */
   .channelTextArea_f75fb0,
   .drawerSizingWrapper__08434,
   .messageGroupWrapper__45690 {
     background: var(--bg-transparent-2);
     border: var(--border-glass-1);
-    /* box-shadow: var(--shadow-glass-2); */
     border-radius: var(--borderRadius-glass-1);
+    backdrop-filter: var(--blur-glass-2);
+  }
+
+  .positionContainer__31a96,
+  .popout__3f413,
+  .bd-modal-root,
+  .menu_c1e9c4,
+  .layerContainer_da8173>div>div>div:not(.chat_ee72fa, .menu_c1e9c4, .rootWithShadow__49fc1, .bd-modal-root, .popout__3f413)>div {
+    border-radius: var(--borderRadius-glass-2);
+    background: var(--bg-transparent-2);
+    border: var(--border-glass-1);
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      backdrop-filter: var(--blur-glass-2);
+      border-radius: var(--borderRadius-glass-2);
+      box-shadow: var(--shadow-glass-2);
+    }
+  }
+
+  .menu_c1e9c4::before {
+    /* border: var(--border-glass-1); */
+    /* border-radius: calc(var(--borderRadius-glass-2) - 5px) !important; */
+  }
+
+  .tooltip__382e7 {
     backdrop-filter: var(--blur-glass-2);
   }
 
@@ -211,13 +267,38 @@
     --space-4: 20px;
   }
 
+  .scrollableContent__927fc {
+    padding-top: 10px;
+  }
+
+  .header__0856d {
+    box-shadow: none;
+  }
+
+  .unicodeShortcut_b9ee0c,
+  .standardStickerShortcut__3ad28,
+  .inspector_aeaaeb {
+    border-top: var(--border-glass-1);
+  }
+
+  .sourceScroller_a2de16,
+  .footer__49fc1 {
+    border-top: var(--border-glass-1);
+    /* background: var(--bg-transparent-2); */
+    padding-top: 1rem;
+  }
+
+  .header__8ef02,
+  .header_fed6d3,
+  .searchBarContainer__927fc,
+  .header__0856d,
+  .top_b3f026,
   .container_f37cb1,
   .container__9293f,
   .searchBar__35e86,
   .wrapper_cb9592,
   .guildSeparator__252b6,
-  .panel__5dec7,
-  .header__45690 {
+  .panel__5dec7 {
     border-bottom: var(--border-glass-1);
     /* background: var(--bg-transparent-2) */
   }
@@ -226,13 +307,6 @@
     border-left: var(--border-glass-1);
     /* background: var(--bg-transparent-2); */
     border-bottom-right-radius: var(--borderRadius-glass-1);
-  }
-
-  .sourceScroller_a2de16,
-  .footer__49fc1 {
-    border-top: var(--border-glass-1);
-    /* background: var(--bg-transparent-2); */
-    padding-top: 1rem;
   }
 
   /* костыльный прозрачный фон за текстовым полем */
@@ -248,24 +322,32 @@
     border-top-right-radius: var(--borderRadius-glass-1);
   }
 
-  .contentColumn__23e6b {
-    padding-top: calc(60px - 36px);
+  .outer_c0bea0,
+  .banner__68edb {
+    border-radius: 0px;
+  }
+
+  .contentRegion__23e6b {
+    /* padding-top: calc(60px - 36px); */
     padding-inline: 1rem;
     backdrop-filter: var(--blur-glass-1);
     background: var(--bg-transparent-1);
+    border-left: var(--border-glass-1);
   }
 
   .side_b3f026 {
     padding: 1rem;
     background: var(--bg-transparent-1);
     border: var(--border-glass-1);
-    box-shadow: var(--shadow-glass-1);
+    /* box-shadow: var(--shadow-glass-1); */
     border-radius: var(--borderRadius-glass-1);
     backdrop-filter: var(--blur-glass-1);
   }
 
+  .scroller_ac6cb0,
+  .gradientBackground__11664,
+  .gradientBackground__11664>div,
   .streamPreview__6da2d,
-  .menu_c1e9c4,
   .container__2637a,
   .children__9293f:after,
   .sidebar_c48ade:after {
@@ -273,7 +355,12 @@
   }
 
   .joinButton__5aa3a {
-    color: var(--text-muted);
+    &>div {
+      mix-blend-mode: difference;
+
+    }
+
+    color: var(--text-custom-main);
     border: var(--border-glass-1);
   }
 
@@ -281,7 +368,7 @@
   .input_a45028::placeholder,
   .placeholder__1b31f {
     font-weight: 500;
-    color: var(--text-muted);
+    color: var(--text-custom-muted);
   }
 
   .icon__2ea32,
@@ -289,16 +376,46 @@
   .icon__9293f {
     color: var(--icons-color-main);
   }
+
+  .addStatusPrompt_ab8609 {
+    color: var(--text-custom-muted);
+  }
+
+  .standardStickerShortcut__3ad28,
+  .unicodeShortcut_b9ee0c {
+    /* background-color: var(--bg-transparent-4); */
+    backdrop-filter: var(--blur-glass-3);
+  }
+}
+
+
+.bar_a562c8 {
+  background-color: color-mix(in srgb, var(--text-custom-muted) 50%, #00000000) !important;
+
+  .barFill_a562c8 {
+    background-color: var(--text-custom-main);
+  }
+}
+
+.popover__2d0ab,
+.container_ab8609 {
+  background: var(--bg-transparent-2);
+  border: var(--border-glass-2) !important;
+  /* box-shadow: var(--shadow-glass-2); */
+  border-radius: var(--borderRadius-glass-1);
+  backdrop-filter: var(--blur-glass-2);
 }
 
 .chat_f75fb0 {
   border-radius: var(--borderRadius-glass-1);
 }
 
+.submenuPaddingContainer_c1e9c4,
 .streamPreviewWrapper__6da2d {
   padding: 0 !important;
 }
 
+.outer_ab8609,
 .callContainer_cb9592 {
   border: none !important;
 }
@@ -312,6 +429,12 @@
   margin-bottom: 0;
 }
 
+.streamPreview__6da2d,
 .fullRegionButton_f1ceac {
   border-radius: var(--borderRadius-glass-2);
+}
+
+.spoilerMarkdownContent__54ab5.hidden__54ab5 .obscuredBlockContent__54ab5,
+.spoilerMarkdownContent__54ab5.hidden__54ab5 .obscuredTextContent__54ab5 {
+  pointer-events: all;
 }
