@@ -2,7 +2,7 @@
  * @name         Glassmorphism Animated
  * @description  Glassmorphism by Cluarain. Animated background
  * @author       Cluarain
- * @version      1.6
+ * @version      1.7
  * @source       https://github.com/Cluarain/glassmorphism-discord-theme
 */
 
@@ -24,8 +24,12 @@
 
 
   /* only RGB, not RGBa */
+  /* --main-bg-rgb: 0, 20, 101; */
+  /* --main-bg-rgb: 0, 50, 55; */
+  /* --main-bg-rgb: 0, 0, 0; */
   --main-bg-rgb: 20, 20, 20;
-  --main-bg-opacity: 0.1;
+
+  --main-bg-opacity: 0.3;
 
   --main-border-color: 255, 255, 255;
   --main-bg-shadow-color: 0, 0, 0;
@@ -35,7 +39,7 @@
   --border-glass-1: 2px solid rgba(var(--main-border-color), 0.2);
   --shadow-glass-1: 0 0 50px rgba(var(--main-bg-shadow-color), var(--main-bg-shadow-opacity));
   --borderRadius-glass-1: 10px;
-  --blur-glass-1: blur(10px);
+  --blur-glass-1: blur(7px);
 
   --bg-transparent-2: rgba(var(--main-bg-rgb), calc(var(--main-bg-opacity) + .2));
   --border-glass-2: 2px solid rgba(var(--main-border-color), 0.1);
@@ -53,11 +57,16 @@
   --blur-glass-4: blur(30px);
 
   --text-custom-main: rgba(255, 255, 255, .8);
-  --text-custom-muted: rgba(255, 255, 255, .5);
+  --text-custom-muted: rgba(255, 255, 255, .6);
+  /* --text-custom-muted: rgba(var(--main-bg-rgb), .5); */
+  --text-custom-muted-2: color-mix(in srgb, rgb(var(--main-bg-rgb)) 10%, #ffffff);
 
   --icons-color-main: rgba(255, 255, 255, .7);
   --icons-color-inactive: rgba(255, 255, 255, .4);
   --main-accent-color-discord: rgba(var(--main-bg-rgb), .8);
+
+  /* --hover-active-color: color-mix(in srgb, var(--main-accent-color-discord) 80%, transparent); */
+  --hover-active-color: rgba(255, 255, 255, .1);
 }
 
 @keyframes changeBg {

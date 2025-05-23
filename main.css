@@ -4,10 +4,8 @@
 
 :root {
   --main-padding: 2rem;
-  --main-gap: 1.5rem;
+  --main-gap: 1rem;
   --padding-guilds: 1rem;
-
-  --hover-active-color: color-mix(in srgb, var(--main-accent-color-discord) 80%, transparent);
 
   --text-main: var(--text-custom-main) !important;
   --text-tertiary: var(--text-custom-main) !important;
@@ -41,12 +39,14 @@
   --neutral-5: rgba(255, 255, 255, .9) !important;
   --neutral-23: var(--icons-color-main) !important;
   --neutral-27: var(--icons-color-main) !important;
-  /* --neutral-29: red; вроде как только неактивные иконки */
+  --neutral-29: var(--text-custom-muted-2);
   --neutral-34: var(--text-custom-muted);
   --neutral-42: var(--bg-transparent-3);
   --neutral-44: var(--bg-transparent-3);
   --neutral-49: transparent;
   --neutral-64: transparent;
+  /* rgba(var(--main-border-color), 0.2); */
+  --neutral-65: transparent;
   --neutral-69: transparent;
   --neutral-72: transparent;
   --neutral-73: transparent;
@@ -187,15 +187,16 @@
     flex: none;
   }
 
+  .autocomplete__13533,
+  .positionContainer__31a96,
   .rootWithShadow__49fc1,
-  /* .submenu_c1e9c4, */
   .addFriendInputWrapper__72ba7,
   .bd-addon-card,
+  .bd-modal-root,
   .container__3a5a1,
   .buttonsInner__5126c,
   .participantsButton__211d1,
   .tile_d6271c,
-  /* .embedFull__623de, */
   .channelTextArea_f75fb0,
   .drawerSizingWrapper__08434,
   .messageGroupWrapper__45690 {
@@ -205,25 +206,26 @@
     backdrop-filter: var(--blur-glass-2);
   }
 
-  .positionContainer__31a96,
-  .popout__3f413,
-  .bd-modal-root,
   .menu_c1e9c4,
-  .layerContainer_da8173>div>div>div:not(.chat_ee72fa, .menu_c1e9c4, .rootWithShadow__49fc1, .bd-modal-root, .popout__3f413)>div {
-    border-radius: var(--borderRadius-glass-2);
-    background: var(--bg-transparent-2);
+  .tooltip__382e7,
+  .outer_c0bea0:not(.user-profile-sidebar),
+  [id*="popout_"]:not(:has(.menu_c1e9c4, .outer_c0bea0)) {
+    border-radius: var(--borderRadius-glass-1);
+    /* background: var(--bg-transparent-2); */
+    background: var(--bg-transparent-1);
     border: var(--border-glass-1);
+    /* z-index: 1; */
 
     &::before {
       content: '';
       position: absolute;
       top: 0;
       left: 0;
-      width: 100%;
-      height: 100%;
+      right: 0;
+      bottom: 0;
       z-index: -1;
       backdrop-filter: var(--blur-glass-2);
-      border-radius: var(--borderRadius-glass-2);
+      border-radius: var(--borderRadius-glass-1);
       box-shadow: var(--shadow-glass-2);
     }
   }
@@ -253,9 +255,9 @@
     border-radius: 0px;
   }
 
+
   .theme-dark.custom-user-profile-theme {
     border-radius: var(--borderRadius-glass-2);
-
   }
 
   .modalContent__468a6 {
@@ -296,6 +298,7 @@
     border-bottom: var(--border-glass-1);
   }
 
+  .user-profile-sidebar,
   .members_c8ffbb {
     border-left: var(--border-glass-1);
     border-bottom-right-radius: var(--borderRadius-glass-1);
@@ -307,6 +310,7 @@
     padding-bottom: 5rem;
   }
 
+  .gradient_e9ef78,
   .container__9293f,
   .callContainer_cb9592,
   .subtitleContainer_f75fb0 {
@@ -314,7 +318,7 @@
     border-top-right-radius: var(--borderRadius-glass-1);
   }
 
-  .outer_c0bea0,
+  /* .outer_c0bea0, */
   .banner__68edb {
     border-radius: 0px;
   }
@@ -356,7 +360,7 @@
   }
 
   .muted__20a53,
-  .input_a45028::placeholder,
+  [class*="input_"]::placeholder,
   .placeholder__1b31f {
     font-weight: 500;
     color: var(--text-custom-muted);
@@ -376,6 +380,15 @@
   .unicodeShortcut_b9ee0c {
     backdrop-filter: var(--blur-glass-3);
   }
+
+  .popout__3f413 {
+    margin-top: 0;
+  }
+
+  .container_a55fdc,
+  .border_a55fdc {
+    box-shadow: none;
+  }
 }
 
 
@@ -389,15 +402,20 @@
 
 .popover__2d0ab,
 .container_ab8609 {
-  background: var(--bg-transparent-2);
+  /* background: var(--bg-transparent-1); */
   border: var(--border-glass-2) !important;
-  /* box-shadow: var(--shadow-glass-2); */
   border-radius: var(--borderRadius-glass-1);
   backdrop-filter: var(--blur-glass-2);
 }
 
 .chat_f75fb0 {
   border-radius: var(--borderRadius-glass-1);
+}
+
+.fullRegionDropdownButton_f1ceac,
+.streamPreview__6da2d,
+.fullRegionButton_f1ceac {
+  border-radius: var(--borderRadius-glass-2);
 }
 
 .submenuPaddingContainer_c1e9c4,
@@ -410,6 +428,7 @@
   border: none !important;
 }
 
+.popout__76f04,
 .container__4e30a {
   margin-left: 0;
   background: none;
@@ -419,12 +438,12 @@
   margin-bottom: 0;
 }
 
-.streamPreview__6da2d,
-.fullRegionButton_f1ceac {
-  border-radius: var(--borderRadius-glass-2);
-}
-
 .spoilerMarkdownContent__54ab5.hidden__54ab5 .obscuredBlockContent__54ab5,
 .spoilerMarkdownContent__54ab5.hidden__54ab5 .obscuredTextContent__54ab5 {
   pointer-events: all;
+}
+
+.content__56fec {
+  mask-image: none;
+  -webkit-mask-image: none
 }
