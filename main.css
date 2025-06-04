@@ -3,7 +3,7 @@
  */
 
 :root {
-  --main-padding: 2rem;
+  --main-padding: 1rem;
   --main-gap: 1rem;
   --padding-guilds: 1rem;
 
@@ -26,7 +26,6 @@
   --background-floating: transparent;
   --background-modifier-accent: transparent;
 
-
   --black: transparent;
   --blurple-34: var(--main-accent-color-discord);
   --blurple-35: var(--main-accent-color-discord);
@@ -45,7 +44,7 @@
   /* scrollbar-color 42 44 */
   --neutral-42: rgba(var(--main-border-color), 0.2);
   --neutral-44: rgba(var(--main-border-color), 0.2);
-  
+
   --neutral-49: transparent;
   --neutral-64: transparent;
   /* rgba(var(--main-border-color), 0.2); */
@@ -65,9 +64,12 @@
   --neutral-95: var(--bg-transparent-3);
   --neutral-97: transparent;
 
+  --border-subtle: rgba(var(--main-border-color), 0.2) !important;
+  /* --theme-base-color-hsl: rgb(0, 255, 0);
+  --theme-border-color-amount: rgb(255, 0, 0);
+  --theme-base-color-amount: rgb(0, 0, 255); */
   /* прозрачность для карточки пользователя */
   /* --plum-15: transparent; */
-
   --plum-18: var(--bg-transparent-2);
 
   --button-filled-white-text: black !important;
@@ -79,6 +81,8 @@
   --background-modifier-active: var(--hover-active-color);
 
   --black-500: transparent;
+  --redesign-input-control-selected: rgba(var(--main-border-color), 0.2) !important;
+
 }
 
 .scroller__99e7c {
@@ -93,7 +97,7 @@
 }
 
 .content_c48ade {
-  padding: calc(var(--main-padding)/2) var(--main-padding) var(--main-padding) var(--main-padding) !important;
+  padding: var(--main-padding) !important;
 
   /* Чтобы не обрезелась тень */
   &>div {
@@ -189,9 +193,14 @@
     flex: none;
   }
 
+  .page_c48ade {
+    height: calc(100svh - 4rem) !important;
+  }
+
   .autocomplete__13533,
   .positionContainer__31a96,
-  .rootWithShadow__49fc1,
+  /* .rootWithShadow__49fc1, */
+  .modal__487be,
   .addFriendInputWrapper__72ba7,
   .bd-addon-card,
   .bd-modal-root,
@@ -200,18 +209,19 @@
   .participantsButton__211d1,
   .tile_d6271c,
   .channelTextArea_f75fb0,
-  .drawerSizingWrapper__08434,
-  .messageGroupWrapper__45690 {
+  /* .messageGroupWrapper__45690  */
+  .drawerSizingWrapper__08434 {
     background: var(--bg-transparent-2);
-    border: var(--border-glass-1);
+    border: var(--border-glass-1) !important;
     border-radius: var(--borderRadius-glass-1);
     backdrop-filter: var(--blur-glass-2);
   }
 
+  .focusLock__49fc1>div,
   .menu_c1e9c4,
   .tooltip__382e7,
-  .outer_c0bea0:not(.user-profile-sidebar),
-  [id*="popout_"]:not(:has(.menu_c1e9c4, .outer_c0bea0)) {
+  .outer_c0bea0:not(.user-profile-sidebar, .user-profile-modal),
+  [id*="popout_"]:not(:has(.menu_c1e9c4, .outer_c0bea0, .focusLock__49fc1)) {
     border-radius: var(--borderRadius-glass-1);
     /* background: var(--bg-transparent-2); */
     background: var(--bg-transparent-1);
@@ -230,6 +240,14 @@
       border-radius: var(--borderRadius-glass-1);
       box-shadow: var(--shadow-glass-2);
     }
+  }
+
+  .modal__487be,
+  #emoji-picker-tab-panel,
+  .drawerSizingWrapper__08434,
+  .channelTextArea_f75fb0,
+  .autocomplete__13533 {
+    background: rgba(var(--main-bg-rgb));
   }
 
   .tooltip__382e7 {
@@ -257,7 +275,8 @@
     border-radius: 0px;
   }
 
-
+  .container__86bf6,
+  .container__86ab2,
   .theme-dark.custom-user-profile-theme {
     border-radius: var(--borderRadius-glass-2);
   }
@@ -286,10 +305,12 @@
     padding-top: 1rem;
   }
 
+  .header__7f727,
+  .header__0856d,
+  .header_c0e32c,
   .header__8ef02,
   .header_fed6d3,
   .searchBarContainer__927fc,
-  .header__0856d,
   .top_b3f026,
   .container_f37cb1,
   .container__9293f,
@@ -297,13 +318,18 @@
   .wrapper_cb9592,
   .guildSeparator__252b6,
   .panel__5dec7 {
-    border-bottom: var(--border-glass-1);
+    border-bottom: var(--border-glass-2);
   }
 
+  .searchResultsWrap_a9e706,
   .user-profile-sidebar,
   .members_c8ffbb {
     border-left: var(--border-glass-1);
     border-bottom-right-radius: var(--borderRadius-glass-1);
+  }
+
+  .rail_d1405b {
+    border-right: var(--border-glass-2);
   }
 
   /* костыльный прозрачный фон за текстовым полем */
@@ -352,17 +378,17 @@
   }
 
   .joinButton__5aa3a {
-    &>div {
-      mix-blend-mode: difference;
-
-    }
-
     color: var(--text-custom-main);
     border: var(--border-glass-1);
+
+    &>div {
+      mix-blend-mode: difference;
+    }
   }
 
   .muted__20a53,
   [class*="input_"]::placeholder,
+  input::placeholder,
   .placeholder__1b31f {
     font-weight: 500;
     color: var(--text-custom-muted);
@@ -387,12 +413,15 @@
     margin-top: 0;
   }
 
+  .popout__3f413.popoutPositionTop__3f413 {
+    margin-bottom: 0;
+  }
+
   .container_a55fdc,
   .border_a55fdc {
     box-shadow: none;
   }
 }
-
 
 .bar_a562c8 {
   background-color: color-mix(in srgb, var(--text-custom-muted) 50%, #00000000) !important;
@@ -440,9 +469,12 @@
   margin-bottom: 0;
 }
 
-.spoilerMarkdownContent__54ab5.hidden__54ab5 .obscuredBlockContent__54ab5,
-.spoilerMarkdownContent__54ab5.hidden__54ab5 .obscuredTextContent__54ab5 {
-  pointer-events: all;
+.spoilerMarkdownContent__54ab5.hidden__54ab5 {
+
+  & .obscuredBlockContent__54ab5,
+  & .obscuredTextContent__54ab5 {
+    pointer-events: all;
+  }
 }
 
 .content__56fec {
