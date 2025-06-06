@@ -254,6 +254,7 @@
     backdrop-filter: var(--blur-glass-2);
   }
 
+  .buttonSection__1405b,
   .container__0f2e8,
   .itemCard__7e549,
   .searchBar__5ec2f {
@@ -426,7 +427,7 @@
 .bar_a562c8 {
   background-color: color-mix(in srgb, var(--text-custom-muted) 50%, #00000000) !important;
 
-  .barFill_a562c8 {
+  & .barFill_a562c8 {
     background-color: var(--text-custom-main);
   }
 }
